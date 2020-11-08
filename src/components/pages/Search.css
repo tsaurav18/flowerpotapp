@@ -1,0 +1,38 @@
+.searchBox {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 12px;
+  
+}
+#searchInput {
+  border-radius: 25px;
+  overflow: hidden;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+}
+.searchIcon {
+  font-size: 27px;
+  margin-left: -45px;
+  position: relative;
+}
+input[type="text"] {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 960px) {
+  .searchBox {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .searchBox {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+}
