@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 
 import { StateProvider } from "./components/StateProvider";
-import reducer, { initialState } from "./components/reducer";
+import reducer, { initialState } from "./components/Reducer";
 
 ReactDOM.render(
   <StateProvider initialState={initialState} reducer={reducer}>
