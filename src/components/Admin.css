@@ -1,0 +1,41 @@
+.__container {
+  display: flex;
+  width: 100%;
+}
+.__section {
+  width: 100%;
+  display: flex;
+}
+.__navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+ul {
+  display: flex;
+}
+.__navbar ul li {
+  display: flex;
+  border: 1px solid #6aaba8;
+  margin: 3px 17px;
+  background-color: #6aaba8;
+  color: white;
+  border-radius: 8px;
+  padding: 11px;
+  outline: none;
+}
+.__navbar ul li:hover {
+  background-color: #0b5f5b;
+}
+.nav_items {
+  cursor: pointer;
+}
+.items {
+  cursor: pointer;
+}
+.products {
+  display: none;
+}
+/* .Listproducts {
+  display: none;
+} */

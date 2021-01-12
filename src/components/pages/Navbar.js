@@ -100,7 +100,7 @@ function Navbar() {
                     <span className="header__optionLineOne">
                       Hello {!user ? "Guest" : user.email}
                     </span>
-                    &nbsp;&nbsp;&nbsp;
+
                     <span className="header__optionLineTwo">
                       {user ? "Sign Out" : "Sign IN"}
                     </span>

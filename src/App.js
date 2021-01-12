@@ -17,7 +17,22 @@ import { useStateValue } from "./components/StateProvider";
 import { auth } from "./firebase";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
+import { db } from "./firebase";
+// import Admin from "./components/Admin";
+import AddProductdb from "./components/AddProductsdb";
+import { Edit } from "./components/EditProduct";
+import { Admin, Resource, EditGuesser } from "react-admin";
+import jsonServerProvider from "ra-data-json-server";
+import { UserList } from "./components/UserList";
+import { ProductListAdmin } from "./components/ProductListAdmin";
+import { EditProductListAdmin } from "./components/EditProductListAdmin";
+import restProvider from "ra-data-simple-rest";
+// const dataProvider = jsonServerProvider(
+//   "https://firestore.googleapis.com/v1/projects/potapp-d09d6/databases/dbproductitems/"
+// );
 
+const dataProvider = restProvider("http://localhost:3000");
+console.log(dataProvider);
 const promise = loadStripe(
   "pk_test_51Hl47bFp8XOhVxcXHONW3Z5cYXJ6ceUjKpE9QGJuuNTD4CMCyXfliGIuA0gejzEmIcZS2Q5N7FSTt9dVMEsiISGA00z4C9XIog"
 );
@@ -53,6 +68,19 @@ function App() {
 
           <Footer />
         </Route>
+        <Route path="/edit" exact component={Edit}>
+          <Navbar />
+          <Edit />
+
+          <Footer />
+        </Route>
+        <Route path="/addProductsdb" exact component={AddProductdb}>
+          <Navbar />
+          <AddProductdb />
+
+          <Footer />
+        </Route>
+
         <Route path="/orders" exact component={Orders}>
           <Navbar />
           <Orders />
@@ -85,6 +113,19 @@ function App() {
           <Footer />
         </Route>
         <Route path="/login" component={Login}></Route>
+        {/* 
+        <Route path="/admin" exact component={Admin}>
+          <Navbar />
+          <Admin />
+          <Footer />
+        </Route> */}
+
+        <Route path="/admin" exact component={Admin}>
+          <Admin dataProvider={dataProvider}>
+            {/* <Resource name="users" list={UserList} edit={EditGuesser} /> */}
+            <Resource name="posts" list={ProductListAdmin} />
+          </Admin>
+        </Route>
       </Switch>
     </Router>
   );

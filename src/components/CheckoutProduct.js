@@ -11,6 +11,7 @@ function CheckoutProduct({ id, image, title, price, rating, hideButton }) {
       id: id,
     });
   };
+  
 
   return (
     <div className="checkoutProduct">

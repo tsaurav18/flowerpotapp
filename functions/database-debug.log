@@ -1,0 +1,7 @@
+12:45:12.544 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+12:45:12.879 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+02:09:33.939 [Thread-1] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.
+02:09:33.958 [NamespaceSystem-akka.actor.default-dispatcher-10] INFO com.firebase.core.namespace.Terminator$Terminator - 1 actors left to terminate: potapp-d09d6
+02:09:33.969 [NamespaceSystem-akka.actor.default-dispatcher-14] INFO com.firebase.core.namespace.NamespaceActor - Stopping namespace actor for potapp-d09d6
+02:09:33.970 [NamespaceSystem-akka.actor.default-dispatcher-14] INFO com.firebase.core.namespace.NamespaceActor - Gauges removed for potapp-d09d6
+02:09:33.979 [Thread-1] INFO com.firebase.server.forge.App$ - Graceful shutdown complete.

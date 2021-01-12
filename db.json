@@ -1,0 +1,18 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "image": "typicode",
+      "price": "200",
+      "rating": "3"
+    },
+    {
+      "id": 2,
+      "title": "new product",
+      "image": "typicode",
+      "price": "100",
+      "rating": "2"
+    }
+  ]
+}

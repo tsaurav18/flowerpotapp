@@ -3,6 +3,8 @@ import "../login/Login.css";
 import { GiFlowerPot } from "react-icons/gi";
 import { auth } from "../../../firebase";
 import { Link, useHistory } from "react-router-dom";
+import { useStateValue } from "../../StateProvider";
+import Admin from "../../Admin";
 function Login() {
   const history = useHistory();
   const [click, setClick] = useState(false);
@@ -22,6 +24,7 @@ function Login() {
   }, []);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isAdmin, setAdmin] = useState(false);
 
   const signIn = (e) => {
     e.preventDefault();
@@ -29,7 +32,11 @@ function Login() {
     auth
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
-        history.push("/");
+        if (email === "admin@gmail.com") {
+          history.push("/admin");
+        } else {
+          history.push("/");
+        }
       })
       .catch((error) => alert(error.message));
   };
@@ -42,7 +49,6 @@ function Login() {
       .then((auth) => {
         // it successfully created a new user with email and password
         if (auth) {
-          console.log(auth);
           history.push("/");
         }
       })

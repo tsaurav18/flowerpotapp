@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "flowerpotapp-33349"
+    "default": "potapp-d09d6",
+    "staging": "potapp-d09d6"
   }
 }
